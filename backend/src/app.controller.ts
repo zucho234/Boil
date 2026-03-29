@@ -1,12 +1,18 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
+import type { CPMInputDto } from './cmp/cmp.types';
 
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  getStatus() {
+    return this.appService.getStatus();
+  }
+
+  @Post('cpm')
+  calculateCpm(@Body() input: CPMInputDto) {
+    return this.appService.calculateCpm(input);
   }
 }
