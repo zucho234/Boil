@@ -5,11 +5,15 @@ Backend i db jest narazie puste. W frontend jest utworzone vite + przygotowałem
 # co musicie zrobic
 Sklonujcie sobie repozytorium z git. I trzeba będzie stworzyć do backendu NestJs co utworzy potrzebne podstawowe pliki, później Dockerfile do tej części i Docker-compose który cała apke będzie budował. No i wtedy zacząć pisać kod do naszej funkcjonalności.
 
-# Uruchomienie backendu
+# Uruchomienie backendu i testu algorytmu
 
 W katalogu `/backend` uruchom:
 
-``` bash
+```
 npm install
 npm run start:dev
+```
+Drugi terminal dalej w `/backend`
+```
+npm run test:cpm
 ```
