@@ -17,3 +17,13 @@ Drugi terminal dalej w `/backend`
 ```
 npm run test:cpm
 ```
+
+frontend
+
+```
+npm run dev
+```
+
+
+# TO DO
+walidacja danych
