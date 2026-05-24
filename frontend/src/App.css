@@ -239,6 +239,102 @@ td {
   color: var(--text-h);
 }
 
+.graph-panel {
+  display: grid;
+  gap: 16px;
+}
+
+.graph-legend {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 6px 10px;
+  border: 1px solid rgba(217, 74, 74, 0.28);
+  border-radius: 999px;
+  background: var(--danger-soft);
+  color: #ffe2e2;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.flow-canvas {
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(64, 119, 209, 0.1), transparent 32%),
+    rgba(18, 18, 18, 0.5);
+}
+
+.flow-canvas .react-flow__node {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.flow-canvas .react-flow__node-default {
+  padding: 0;
+}
+
+.cpm-node {
+  min-width: 88px;
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(38, 24, 37, 0.96);
+  color: var(--text-h);
+  text-align: center;
+  box-shadow: 0 12px 28px -18px rgba(0, 0, 0, 0.8);
+}
+
+.cpm-node strong {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.cpm-node span {
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.critical-flow-node .cpm-node {
+  border-color: rgba(217, 74, 74, 0.78);
+  background: rgba(72, 28, 35, 0.98);
+}
+
+.critical-flow-node .cpm-node span {
+  color: #ffd6d6;
+}
+
+.flow-canvas .react-flow__edge-path {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.35));
+}
+
+.flow-canvas .react-flow__minimap {
+  background: rgba(18, 18, 18, 0.75);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.flow-canvas .react-flow__controls {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.flow-canvas .react-flow__controls-button {
+  border-bottom-color: var(--border);
+  background: rgba(38, 24, 37, 0.94);
+  color: var(--text-h);
+}
+
 .result-panel table th,
 .result-panel table td {
   padding: 10px 6px;
@@ -299,5 +395,9 @@ input::placeholder {
 
   .summary-grid {
     grid-template-columns: 1fr;
+  }
+
+  .flow-canvas {
+    height: 360px;
   }
 }
