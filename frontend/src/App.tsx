@@ -285,7 +285,7 @@ function App() {
     <main className="app-shell">
       <section className="hero-panel">
         <div>
-          <p className="eyebrow">Badania operacyjne i logistyka</p>
+          <p className="eyebrow"></p>
           <h1>Kalkulator CPM</h1>
         </div>
 
@@ -375,7 +375,7 @@ function App() {
 
           <div className="panel-heading compact">
             <div>
-              <p className="panel-label">Wysłane do API</p>
+              <p className="panel-label"></p>
               <h2>Lista czynności</h2>
             </div>
             <button
@@ -425,7 +425,7 @@ function App() {
         <div className="panel result-panel">
           <div className="panel-heading">
             <div>
-              <p className="panel-label">Wynik z backendu</p>
+              <p className="panel-label"></p>
               <h2>Podsumowanie CPM</h2>
             </div>
           </div>
@@ -539,8 +539,7 @@ function App() {
           ) : (
             <div className="empty-state">
               <p>
-                Dodaj dane wejściowe i uruchom obliczenia. Wyniki z `POST /cpm`
-                pojawią się tutaj.
+                Dodaj dane wejściowe i uruchom obliczenia, aby zobaczyć wynik.
               </p>
             </div>
           )}
