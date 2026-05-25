@@ -221,6 +221,38 @@ function App() {
       return;
     }
 
+    if (!Number.isFinite(trimmed.duration) || trimmed.duration <= 0) {
+      setError("Czas trwania musi być liczbą większą od zera.");
+      return;
+    }
+
+    if (!Number.isInteger(trimmed.duration)) {
+      setError("Czas trwania musi być liczbą całkowitą.");
+      return;
+    }
+
+    if (trimmed.from === trimmed.to) {
+      setError('Zdarzenie początkowe i końcowe nie mogą być takie same.');
+      return;
+    }
+
+    if (activities.some((activity) => activity.id === trimmed.id)) {
+      setError(`Czynność o ID "${trimmed.id}" już istnieje.`);
+      return;
+    }
+
+    if (
+      activities.some(
+        (activity) =>
+          activity.from === trimmed.from && activity.to === trimmed.to,
+      )
+    ) {
+      setError(
+        `Połączenie ${trimmed.from} -> ${trimmed.to} zostało już dodane.`,
+      );
+      return;
+    }
+
     setActivities((current) => [
       ...current,
       {
