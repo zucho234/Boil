@@ -57,10 +57,14 @@ type CPMResult = {
 };
 
 const initialActivities: Activity[] = [
-  { id: "A", name: "A", from: "1", to: "2", duration: 3 },
-  { id: "B", name: "B", from: "1", to: "3", duration: 2 },
-  { id: "C", name: "C", from: "2", to: "4", duration: 4 },
-  { id: "D", name: "D", from: "3", to: "4", duration: 1 },
+  { id: "A", name: "A", from: "1", to: "2", duration: 2 },
+  { id: "B", name: "B", from: "2", to: "3", duration: 4 },
+  { id: "C", name: "C", from: "1", to: "3", duration: 3 },
+  { id: "D", name: "D", from: "3", to: "4", duration: 5 },
+  { id: "E", name: "E", from: "2", to: "5", duration: 2 },
+  { id: "F", name: "F", from: "4", to: "6", duration: 3 },
+  { id: "G", name: "G", from: "5", to: "6", duration: 4 },
+  { id: "H", name: "H", from: "6", to: "7", duration: 2 },
 ];
 
 const emptyForm: ActivityForm = {
