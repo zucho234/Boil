@@ -269,9 +269,18 @@ td {
 }
 
 .flow-canvas .react-flow__node {
+  z-index: 5 !important;
   border: 0;
   background: transparent;
   box-shadow: none;
+}
+
+.flow-canvas .normal-edge {
+  z-index: 1 !important;
+}
+
+.flow-canvas .critical-edge {
+  z-index: 10 !important;
 }
 
 .flow-canvas .react-flow__node-default {

@@ -126,6 +126,7 @@ function buildGraphElements(
       },
       sourcePosition: Position.Right,
       targetPosition: Position.Left,
+      zIndex: 5,
       data: {
         label: (
           <div className="cpm-node">
@@ -160,6 +161,8 @@ function buildGraphElements(
       label,
       type: "smoothstep",
       animated: isCritical,
+      className: isCritical ? "critical-edge" : "normal-edge",
+      zIndex: isCritical ? 10 : 1,
       markerEnd: {
         type: MarkerType.ArrowClosed,
         color: isCritical ? "#d94a4a" : "#afa7b5",
